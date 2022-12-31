@@ -1,12 +1,10 @@
+let postArray=[];
 let blogEl=document.getElementById("blog-content");
 const buttonEl=document.getElementById("bt");
-fetch("https://apis.scrimba.com/jsonplaceholder/posts")
-  .then((response) => response.json())
-  .then((data) => 
-  {
-    const postsArr=data.slice(0,5);
+
+function renderposts(){
     let str='';
-    for(let post of postsArr){
+    for(let post of postArray){
         str+=`
         <h3 class="heading-el">${post.title}</h3>
         <p class="body-el">${post.body}</p>
@@ -14,7 +12,14 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
         `
     }
     blogEl.innerHTML=str;
+}
 
+fetch("https://apis.scrimba.com/jsonplaceholder/posts")
+  .then((response) => response.json())
+  .then((data) => 
+  {
+    postArray=data.slice(0,5)
+    renderposts();
   });
 
   buttonEl.addEventListener('click',function(e){
@@ -35,7 +40,11 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
 
     fetch("https://apis.scrimba.com/jsonplaceholder/posts",options)
         .then(res => res.json())
-        .then(data =>console.log(data))
+        .then(post =>
+            postArray.unshift(post),
+            renderposts()
+        )
+
     })
  
 // fetch("https://apis.scrimba.com/jsonplaceholder/todos",{
