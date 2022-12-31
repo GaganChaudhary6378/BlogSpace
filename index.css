@@ -15,7 +15,6 @@ body{
 }
 #blog-content {
     box-sizing: border-box;
-    border: 2px dashed rgb(40, 44, 241);
     margin: 20px;
 }
 .heading-el{
@@ -28,4 +27,18 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 30px;
     margin-left: 10px;
+}
+
+#blog-list{
+    padding: 60px 10px 10px;
+    display: grid;
+    background-color: lightblue;
+}
+#post-title,#post-body{
+    margin-bottom: 10px;
+}
+button{
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
 }
