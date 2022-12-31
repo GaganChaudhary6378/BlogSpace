@@ -1,0 +1,31 @@
+body{
+    margin: 0px;
+}
+.navbar{
+    background-color: aquamarine;
+    height: fit-content;
+    border-top: 10px;
+    border-bottom: 15px;
+    border: 2px solid black; 
+}
+.nav-cont{
+    padding-left: 44%;
+    color: rgb(76, 5, 5);
+    font-size:30px;
+}
+#blog-content {
+    box-sizing: border-box;
+    border: 2px dashed rgb(40, 44, 241);
+    margin: 20px;
+}
+.heading-el{
+    font-weight: bold;
+    color: brown;
+    font-family:cursive;
+    margin-left: 10px;
+}
+.body-el{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 30px;
+    margin-left: 10px;
+}
